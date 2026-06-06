@@ -67,7 +67,8 @@ public class Code {
                     break;
 
                 case 6:
-
+             System.out.println("Nombre de clients enregistres : " + liste.size());
+            � break;
                 case 0:
                     System.out.println("Fermeture de l'application.");
                     break;
