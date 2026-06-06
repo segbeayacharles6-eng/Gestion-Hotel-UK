@@ -51,6 +51,20 @@ public class Code {
                 case 4:
 
                 case 5:
+                    System.out.print("ID du client a rechercher : ");
+                    int idRecherche = scanner.nextInt();
+                    boolean trouveRecherche = false;
+                    for (Client c : liste) {
+                        if (c.id == idRecherche) {
+                            System.out.println("Nom : " + c.nom + " | Prenom : " + c.prenom);
+                            trouveRecherche = true;
+                            break;
+                        }
+                    }
+                    if (!trouveRecherche) {
+                        System.out.println("Client introuvable.");
+                    }
+                    break;
 
                 case 6:
 
