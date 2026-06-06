@@ -32,7 +32,19 @@ public class Code {
                     }
                     break;
 
-                case 2:
+                case 2:    
+                          System.out.print("Nom : ");
+                    String nom = scanner.nextLine();
+                    System.out.print("Prénom : ");
+                    String prenom = scanner.nextLine();
+                    System.out.print("ID (Numero de chambre) : ");
+                    int id = scanner.nextInt();
+                    System.out.print("Nombre de nuits : ");
+                    int nbrNuit = scanner.nextInt();
+                    liste.add(new Client(nom, prenom, id, nbrNuit));
+                    System.out.println("Client enregistre avec succes.");
+                    break;
+
 
                 case 3:
 
