@@ -23,18 +23,27 @@ public class Code {
 
             switch (choix) {
                 case 1:
-                    if (liste.isEmpty()) {
-                        System.out.println("aucun client pour l'instant");
-                    } else {
-                        for (Client c : liste) {
-                            System.out.println("Chambre ID: " + c.id + " | Nom: " + c.nom + " | Prénom: " + c.prenom + " | Nuits: " + c.nbrNuit);
-                        }
-                    }
-                    break;
 
                 case 2:
 
                 case 3:
+
+System.out.print("ID du client a facturer : ");
+                    int idFacture = scanner.nextInt();
+                    boolean trouveFacture = false;
+                    for (Client c : liste) {
+                        if (c.id == idFacture) {
+                            int montant = c.nbrNuit * 5000;
+                            System.out.println("Facture pour " + c.prenom + "            " + c.nom + " : " + montant + " FCFA");
+                            trouveFacture = true;
+                            break;
+                        }
+                    }
+                    if (!trouveFacture) {
+                        System.out.println("Client introuvable.");
+                    }
+                    break;
+
 
                 case 4:
 
@@ -67,3 +76,4 @@ class Client {
         this.nbrNuit = nbrNuit;
     }
 }
+
