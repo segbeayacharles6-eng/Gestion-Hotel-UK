@@ -17,7 +17,7 @@ public class Code {
             System.out.println("6. Afficher le nombre de clients enregistres");
             System.out.println("0. Quitter");
             System.out.print("Votre choix : ");
-            
+
             choix = scanner.nextInt();
             scanner.nextLine();
 
@@ -27,7 +27,7 @@ public class Code {
                         System.out.println("aucun client pour l'instant");
                     } else {
                         for (Client c : liste) {
-                            System.out.println("Chambre ID: " + c.id + " | Nom: " + c.nom + " | Prénom: " + c.prenom + " | Nuits: " + c.nbrNuit);
+                            System.out.println("Chambre ID: " + c.id + " | Nom: " + c.nom + " | Prenom: " + c.prenom + " | Nuits: " + c.nbrNuit);
                         }
                     }
                     break;
@@ -49,6 +49,21 @@ public class Code {
                 case 3:
 
                 case 4:
+                    System.out.print("ID du client a liberer : ");
+                    int idLibere = scanner.nextInt();
+                    boolean trouveLibere = false;
+                    for (int i = 0; i < liste.size(); i++) {
+                        if (liste.get(i).id == idLibere) {
+                            liste.remove(i);
+                            System.out.println("Client libere et supprime de la liste.");
+                            trouveLibere = true;
+                            break;
+                        }
+                    }
+                    if (!trouveLibere) {
+                        System.out.println("Client introuvable.");
+                    }
+                    break;
 
                 case 5:
                     System.out.print("ID du client a rechercher : ");
@@ -94,3 +109,4 @@ class Client {
         this.nbrNuit = nbrNuit;
     }
 }
+
