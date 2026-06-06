@@ -35,7 +35,7 @@ public class Code {
                 case 2:    
                           System.out.print("Nom : ");
                     String nom = scanner.nextLine();
-                    System.out.print("Prénom : ");
+                    System.out.print("PrÃ©nom : ");
                     String prenom = scanner.nextLine();
                     System.out.print("ID (Numero de chambre) : ");
                     int id = scanner.nextInt();
@@ -82,8 +82,8 @@ public class Code {
                     break;
 
                 case 6:
-             System.out.println("Nombre de clients enregistres : " + liste.size());
-            � break;
+                    System.out.println("Nombre de clients enregistres : " + liste.size());
+                    break;
                 case 0:
                     System.out.println("Fermeture de l'application.");
                     break;
